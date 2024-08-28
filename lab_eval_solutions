@@ -1,0 +1,50 @@
+Q1.)
+
+def swap_string(text, n):
+    
+    swapped_text = text.replace('.', '<dot>').replace(',', '<comma>')
+    swapped_text = swapped_text.replace('<dot>', ',').replace('<comma>', '.')
+   
+ 
+    lower_part = swapped_text[:n].lower()
+    upper_part = swapped_text[n:].upper()
+   
+    
+    result = lower_part + upper_part
+    return result
+
+
+text = "Yes,Real time monitoring, Immediate alerts."
+n = 6
+print("Input :")
+print(text,n)
+print("Output :")
+print(swap_string(text,n))
+
+
+
+
+Q2.)
+def count_vowels_and_unique(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+    unique_vowels = set()
+   
+    for char in text:
+        if char in vowels:
+            count += 1
+            unique_vowels.add(char.lower())
+  
+    unique_vowels_sorted = sorted(unique_vowels)
+   
+ 
+    return f"Vowels:{count}\n{', '.join(unique_vowels_sorted)}"
+
+text = "This is Lab EvaluatiOn"
+
+print("Input text : ")
+print(text)
+print("Output : ")
+output = count_vowels_and_unique(text)
+print(output)
+
